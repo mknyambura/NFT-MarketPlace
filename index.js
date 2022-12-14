@@ -23,25 +23,26 @@ const activeHeaderOnScroll = function(){
 window.addEventListener('scroll', activeHeaderOnScroll);
 
 // Slider 
-const slider = document.querySelector('.slider');
-const sliderInitialize = function(currentSlide){
-    const sliderContainer = currentSlide.querySelector('.slider-container');
-    const previousButton = currentSlide.querySelector('[data-slider-previous]')
-    const NextButton = currentSlide.querySelector('[data-slider-next]')
+const sliders = document.querySelector('.slider');
+const sliderInitialize = function(currentSlider){
+    const sliderContainer = currentSlider.querySelector('.slider-container');
+    const sliderPreviousButton = currentSlider.querySelector('.previous')
+    const sliderNextButton = currentSlider.querySelector('.next')
 
-    const totalSlider = Number(getComputedStyle(currentSlide).getPropertyValue('--slider-item'))
-    const sliderItems = sliderContainer.childElementCount.childElementCount - totalSlider
+    const totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue('--slider-item'));
+    const totalSliderItems = sliderContainer.childElementCount.childElementCount - totalSliderVisibleItems;
     
+    // Current Slide 
     const currentSlidePosition = 0;
     const moveSliderItem = function () {
         sliderContainer.style.transform = `translateX(-${
-            sliderContainer.children[currentSlidePosition].offsetLeft
-        }px)`;
+            sliderContainer.children[currentSlidePosition].offsetLeft}px)`;
     }
 
-    const nextSlide = function (){
-        const endSlide = currentSlidePosition >= totalSlider
-        if (endSlide){
+    // Next Slide 
+    const slideNext = function (){
+        const slideEnd = currentSlidePosition >= totalSliderItems
+        if (slideEnd){
             currentSlidePosition = 0 ;
         } else {
             currentSlidePosition++;
@@ -49,10 +50,10 @@ const sliderInitialize = function(currentSlide){
         moveSliderItem();
     }
 
-    NextButton.addEventListener("click", nextSlide);
+    sliderNextButton.addEventListener("click", slideNext);
 }
 
 
-for(const i=0, len=slider.length; i < len; i++) {
-    sliderInitialize(slider[i]);
+for(const i=0, len=sliders.length; i < len; i++) {
+    sliderInitialize(sliders[i]);
 }

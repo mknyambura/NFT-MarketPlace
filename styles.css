@@ -60,7 +60,7 @@ body {
 }
 
 /******************************************/
-/******************REPEATED STYLES******************/
+/***************REPEATED STYLES************/
 /******************************************/
 
 .container {
@@ -83,43 +83,34 @@ body {
     color: #fff;
     font-size: 3.6rem;
     font-weight: 700;
-  }
-  
+}  
 .headline-medium { 
     font-size: 2.6rem; 
 }
-  
 .headline-large, #headline-md { 
     line-height: 1.35; 
 }
-  
 .title-large { 
     font-size: 2rem; 
 }
 .title-medium { 
     font-size: 1.8rem; 
 }
-  
 .title-small { 
     font-size: 1.7rem; 
 }
-  
 .body-large { 
     font-size: 2rem; 
 }
-  
 .body-medium { 
     font-size: 1.7rem; 
 }
-  
 .label-large { 
     font-size: 1.5rem; 
-}
-  
+}  
 .label-medium { 
     font-size: 1.4rem; 
 }
-  
 .headline-medium, .title-large, .title-medium, .title-small {
     color: #ffffff;
     font-weight: 600;
@@ -139,8 +130,7 @@ body {
 .button-icon.primary {
     background-color: #7c3bed;
     transition: 0.25s ease;
-}
-  
+} 
 .button-icon.primary:is(:hover, :focus-visible) {
     background-color: #6b26d9;
     border-color: #6b26d9;
@@ -166,8 +156,44 @@ body {
 }
 .button-link:is(:hover, :focus-visible) { 
     background-color: #6b26d9; 
+    color: #fff;
 }
-
+.text-center {
+    text-align: center;
+}
+.section-title {
+    margin-block-end: 45px;
+}
+.card{
+    background: #0f1729;
+    border-radius: 8px;
+}
+.card-banner{
+    border-radius: 8px;
+}
+.image-holder{
+    aspect-ratio: var(--width) / var(--height);
+    background-color: #1a2233;
+    overflow: hidden;
+}
+.image-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.button-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-width: max-content;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.56px;
+}
+.button-link ion-icon{
+    color: inherit;
+}
 
 /******************************************/
 /******************HEADER******************/
@@ -243,7 +269,9 @@ body {
     padding: 10px 15px;
 }
 
-/* Home */
+/******************************************/
+/******************HOME******************/
+/******************************************/
 .home{
     position: relative;
     padding: 180px 64px;
@@ -264,6 +292,105 @@ body {
 .home .button-link{
     margin-inline: auto;
 }
-.button-link ion-icon {
+
+.card-profile ion-icon{
     color: #fff;
+}
+
+/******************************************/
+/**************TOP COLLECTION**************/
+/******************************************/
+.top-collection .title .button-link { 
+    display: none; 
+}
+.top-collection .slider {
+    --slider-item: 1;
+  
+    position: relative;
+    margin-inline: -8px;
+    padding: 4px 12px;
+    overflow-x: hidden;
+}
+.top-collection .slider-container {
+    position: relative;
+    display: flex;
+    transition: transform 300ms ease;
+}
+.top-collection .slider-item {
+    min-width: calc(100% / var(--slider-item));
+    width: calc(100% / var(--slider-item));
+    padding-inline: 12px;
+}
+.collection-card {
+    padding: 12px;
+    box-shadow: 0 0 3px #1f2937;
+}
+.collection-card .card-content { 
+    padding: 16px; 
+}
+.collection-card .card-profile {
+    position: relative;
+    width: 64px;
+    margin-block-start: -50px;
+    box-shadow: 0 5px 13px #1f2937;
+    background-color: #1a2233;
+}
+.collection-card .card-profile img { 
+    border-radius: 6px 
+}
+.collection-card .card-profile ion-icon {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    color: #059467;
+    font-size: 2.3rem;
+}
+.collection-card .card-title { 
+    margin-block-start: 12px; 
+}
+.collection-card .card-author {
+    display: flex;
+    gap: 2px;
+    font-style: italic;
+}
+.collection-card .card-author .link\:hover {
+    font-style: normal;
+    color: #7c3bed;
+}
+.collection-card .card-text { 
+    margin-block-start: 4px; 
+}
+.slider-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0f1729;
+    font-size: 1.7rem;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 13px #1f2937;
+    transition: 0.25s ease;
+}
+.slider-button ion-icon {
+    color: #fff;
+}
+.slider-button:is(:hover, :focus-visible) { 
+    background-color: #7c3bed; 
+}
+.slider-button:disabled { 
+    display: none; 
+}
+
+.slider-button.previous { 
+    left: 10px; 
+}
+.slider-button.next { 
+    right: 10px; 
+}
+.top-collection .container > .btn-link {
+    margin-inline: auto;
+    margin-block-start: 32px;
 }

@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
@@ -62,21 +63,21 @@
     <main>
         <article>
             <section aria-label="home" class="section home">
-                <div id="container" class="container">
+                <div class="container">
                     <h1 class="headline-large headline-title">
                         Discover rate 
                         collection or <span class="span">Arts $ NFTS</span>
                     </h1>
-                    <p id="section-text" class="section-text body-large">
+                    <p class="section-text body-large">
                         We are a huge marketplace dedicated to connecting great artists of all Metalink with their fans and unique token collectors!
                     </p>
                     <a class="button-link" href="#">Explore Now</a>
                 </div>
             </section>
-            <section id="section" class="top-collection" aria-labelledby="collection-label">
-                <div id="container" class="container">
-                    <div id="title" class="title">
-                        <h2 id="headline-medium" class="headline-medium section-title text-center">
+            <section class="top-collection" aria-labelledby="collection-label">
+                <div class="container">
+                    <div class="title">
+                        <h2 class="headline-medium section-title text-center">
                             Top Collections
                         </h2>
                         <a href="" class="button-link link:hover">
@@ -84,6 +85,7 @@
                             <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                         </a>
                     </div>
+
                     <div class="slider" data-slider>
                         <ul class="slider-container" data-slider-container>
                             <li class="slider-item">
@@ -241,34 +243,22 @@
                                     </div>
                                 </div>
                             </li>
-
-                            <li class="slider-item">
-                                <!-- Card Collection  -->
-                                <div class="collection-card card">
-                                    <!-- Card banner  -->
-                                    <figure class="card-banner image-holder" style="--width: 500; --height: 500;">
-                                        <img src="images/showcase-7.jpg" loading="lazy" width="500" height="500" alt="Animations Collection" class="image-cover">
-                                    </figure>
-                                    <!-- Card Content  -->
-                                    <div class="card-content">
-                                        <!-- Card Profile  -->
-                                        <div class="card-profile">
-                                            <img src="images/avatar-7.jpg" width="65" height="65" loading="lazy" alt="NormalNormad">
-                                            <ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>
-                                        </div>
-                                        <!-- Card title  -->
-                                        <h3 class="title-medium card-title">
-                                            <a href="" class="link:hover">African Collection</a>
-                                        </h3>
-                                        <p class="label-medium card-author">
-                                            by <a href="#" class="link:hover">@NormalNormad</a>
-                                        </p>
-                                        <p class="card-text">25 items</p>
-                                    </div>
-                                </div>
-                            </li>
                         </ul>
+                        <!-- Previous Button  -->
+                        <button class="slider-button previous" aria-label="Previous Slide">
+                            <ion-icon name="chevron-back-sharp" aria-hidden="false"></ion-icon>
+                            <!-- <i class="fa-sharp fa-solid fa-chevron-up"></i> -->
+                        </button>
+                        <!-- Next Button  -->
+                        <button class="slider-button next" aria-label="Next Slide">
+                            <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
+                        </button>
                     </div>
+
+                    <a href="#" class="button-link link:hover">
+                        <span class="span">See More</span>
+                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                    </a>
                 </div>
             </section>
         </article>
